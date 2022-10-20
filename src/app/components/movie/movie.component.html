@@ -1,0 +1,18 @@
+<div class="main" *ngIf="movieData">
+  <div class="left">
+    <img [src]="movieData.posterLink" alt="poster" />
+  </div>
+  <div class="right">
+    <div class="title">{{ movieData.name }}</div>
+    <div class="show" *ngFor="let show of movieData.shows; let ind = index">
+      <h2>{{ show.theatre | uppercase }}</h2>
+      <h5>{{ show.date | date }}</h5>
+      <h5>{{ show.capacity }} seats are available</h5>
+      <h4>{{ show.show | uppercase }} SHOW</h4>
+      <form [formGroup]="ticketForm">
+        <input class="inp" type="number" formControlName="quantity" placeholder="Number of Tickets">
+      </form>
+      <button (click)="buyTickets(ind)">Buy Tickets</button>
+    </div>
+  </div>
+</div>

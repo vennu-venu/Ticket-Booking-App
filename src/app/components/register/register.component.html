@@ -1,0 +1,35 @@
+<div class="main">
+  <div class="left">
+    <p>#showtime</p>
+  </div>
+  <div class="right">
+    <p class="head"><span class="cust-letter">R</span>egister</p>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form">
+      <input
+        class="inp"
+        type="text"
+        formControlName="username"
+        placeholder="Username"
+      />
+      <input
+        class="inp"
+        type="email"
+        formControlName="email"
+        placeholder="Email"
+      />
+      <input
+        class="inp"
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+      <input
+        class="inp"
+        type="password"
+        formControlName="cpassword"
+        placeholder="Confirm Password"
+      />
+      <input class="submit-btn" type="submit" value="Register" />
+    </form>
+  </div>
+</div>

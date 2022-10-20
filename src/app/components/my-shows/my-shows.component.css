@@ -1,0 +1,48 @@
+.shows {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.show {
+  margin: 10px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 40vw;
+  background-color: rgb(50, 50, 50, 0.5);
+  border-radius: 10px;
+}
+
+.show:hover {
+  background-color: rgb(200, 40, 70, 0.2);
+}
+
+.title {
+  color: rgb(200, 40, 70);
+}
+
+
+@media (max-width: 1000px) {
+  .show {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .shows {
+    padding: 10px 0px;
+  }
+  .show {
+    width: 100vw;
+    flex-direction: column;
+  }
+  .right {
+    padding-top: 0px;
+    text-align: center;
+  }
+}
+

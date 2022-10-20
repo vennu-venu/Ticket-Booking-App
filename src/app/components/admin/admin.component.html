@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="left">
+    <p>#showtime</p>
+  </div>
+  <div class="right">
+    <p class="head"><span class="cust-letter">A</span>dmin <span class="cust-letter">L</span>ogin</p>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form">
+      <input
+        class="inp"
+        type="text"
+        formControlName="username"
+        placeholder="Username"
+      />
+      <input
+        class="inp"
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+      <input class="submit-btn" type="submit" value="Login" />
+      <p *ngIf="invalidCred" class="invalid">Invalid credentials</p>
+    </form>
+  </div>
+</div>

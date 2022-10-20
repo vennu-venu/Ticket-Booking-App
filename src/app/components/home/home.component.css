@@ -1,0 +1,23 @@
+.home-main {
+  background-color: rgb(50, 50, 50, 0.4);
+  width: 90vw;
+  margin: 20px auto;
+  height: 40vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 25px;
+  font-size: 3rem;
+  font-weight: 400;
+  color: rgb(200, 40, 70);
+  white-space: wrap;
+}
+
+@media (max-width: 720px) {
+  .home-main {
+    font-size: 2em;
+    width: 80vw;
+    height: 30vh;
+  }
+}

@@ -1,0 +1,7 @@
+<div class="movies">
+  <div class="card" *ngFor="let movie of movies">
+    <img class="poster" [src]=movie.posterLink alt="poster">
+    <h4 class="card-title">{{ movie.name }}</h4>
+    <button *ngIf="isLoggedIn" (click)="buyTickets(movie.id)">Buy Tickets</button>
+  </div>
+</div>

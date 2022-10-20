@@ -1,0 +1,57 @@
+.movies {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.card {
+  height: auto;
+  width: 22%;
+  background-color: rgb(50, 50, 50, 0.5);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.025);
+  transition-duration: 0.5s;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+.card button {
+  background-color: rgb(200, 40, 70);
+  color: whitesmoke;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  width: 80%;
+}
+
+.card button:hover {
+  background-color: white;
+  color: rgb(200, 40, 70);
+  transition-duration: 0.5s;
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 33%;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+}

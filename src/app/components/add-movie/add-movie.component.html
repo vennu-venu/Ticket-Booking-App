@@ -1,0 +1,42 @@
+<div class="main">
+  <div class="left">
+    <p>#showtime</p>
+  </div>
+  <div class="right">
+    <p class="head">
+      <span class="cust-letter">A</span>dd
+      <span class="cust-letter">M</span>ovie
+    </p>
+    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()" class="form">
+      <input
+        class="inp"
+        type="text"
+        formControlName="name"
+        placeholder="Movie Name"
+      />
+      <img [src]="movieForm.value.posterLink" alt="" />
+      <input
+        class="inp"
+        type="url"
+        formControlName="posterLink"
+        placeholder="Poster Link"
+      />
+      <input class="inp" type="date" formControlName="date" placeholder="Date" />
+      <select class="inp" formControlName="show">
+        <option value="morning">Morning Show</option>
+        <option value="matnee">Matnee Show</option>
+        <option value="first">First Show</option>
+        <option value="second">Second Show</option>
+      </select>
+      <select class="inp" formControlName="theatre">
+        <option value="pvr">PVR Mall</option>
+        <option value="amb">AMB</option>
+        <option value="asian">Asian</option>
+        <option value="imax">iMax</option>
+        <option value="inox">iNox</option>
+      </select>
+      <input class="inp" type="number" formArrayName="capacity">
+      <input class="submit-btn" type="submit" value="Add Movie" />
+    </form>
+  </div>
+</div>

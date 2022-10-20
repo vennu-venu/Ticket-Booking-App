@@ -1,0 +1,15 @@
+<div class="nav-bar">
+  <div class="logo"><span class="cust-word">Show</span> Time</div>
+  <div class="nav-links">
+    <a *ngIf="!isAdminLoggedIn" [routerLink]="['/home']" routerLinkActive="active">Home</a>
+    <a *ngIf="!isLoggedIn && !isAdminLoggedIn" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+    <a *ngIf="!isLoggedIn && !isAdminLoggedIn" [routerLink]="['/register']" routerLinkActive="active">Register</a>
+    <a *ngIf="!isLoggedIn && !isAdminLoggedIn" [routerLink]="['/admin']" routerLinkActive="active">Admin</a>
+    <a [routerLink]="['/movies']" routerLinkActive="active">Movies</a>
+    <a *ngIf="isAdminLoggedIn" [routerLink]="['/add-movie']" routerLinkActive="active">Add Movie</a>
+    <a *ngIf="isAdminLoggedIn" [routerLink]="['/shows']" routerLinkActive="active">Shows</a>
+    <a *ngIf="isAdminLoggedIn" [routerLink]="['/show-details']" routerLinkActive="active">Show Details</a>
+    <a *ngIf="isLoggedIn" [routerLink]="['/my-shows']" routerLinkActive="active">My Shows</a>
+    <a [routerLink]="['/home']" *ngIf="isLoggedIn || isAdminLoggedIn" (click) = "logout()">Logout</a>
+  </div>
+</div>

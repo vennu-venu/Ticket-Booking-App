@@ -1,0 +1,14 @@
+<div class="shows">
+  <div *ngFor="let show of myShows" class="show">
+    <div class="left">
+      <img [src]=show.posterLink alt="poster">
+    </div>
+    <div class="right">
+      <h1 class="title">{{ show.name }}</h1>
+      <h2>{{ show.theatre | uppercase }}</h2>
+      <h5>{{ show.date | date }}</h5>
+      <h5>{{ show.tickets }} Tickets</h5>
+      <h4>{{ show.show | uppercase }} SHOW</h4>
+    </div>
+  </div>
+</div>
